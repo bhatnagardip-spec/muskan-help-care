@@ -2828,3 +2828,93 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+/* Tablet */
+@media (max-width: 991px) {
+  .about-grid,
+  .why-choose-grid,
+  .contact-grid { grid-template-columns: 1fr !important; gap: 32px; }
+
+  .activities-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .counters-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .highlights-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 30px; }
+  .calculator-card { flex-direction: column; gap: 20px; }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .section { padding: 50px 0; }
+
+  /* Top bar */
+  .topbar-container { flex-direction: column; gap: 4px; text-align: center; padding: 6px 0; }
+  .topbar-left, .topbar-right { justify-content: center; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+  .hide-mobile, .hide-sm { display: none !important; }
+
+  /* Header / Logo */
+  .logo-title { font-size: 15px; }
+  .logo-tagline { font-size: 10px; display: none; }
+  .logo-symbol { width: 42px; height: 42px; }
+
+  /* Mobile menu (agar already chal raha hai to ye hissa skip kar sakte ho) */
+  .mobile-toggle { display: flex !important; }
+  .nav-menu {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; padding: 16px;
+    flex-direction: column; align-items: stretch;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    display: none;
+  }
+  .nav-menu.active, .nav-menu.open, .nav-menu.show { display: flex; }
+  .nav-links { flex-direction: column; gap: 4px; }
+  .nav-actions { margin-top: 12px; }
+  .nav-actions .btn { width: 100%; justify-content: center; }
+
+  /* Hero */
+  .hero-section .slide-content { padding: 40px 16px 90px; }
+  .slide-title { font-size: 28px !important; line-height: 1.25; }
+  .slide-title br { display: none; }
+  .slide-desc { font-size: 14px; line-height: 1.6; }
+  .slide-buttons { flex-direction: column; gap: 10px; }
+  .slide-buttons .btn { width: 100%; justify-content: center; }
+  .slider-arrow { display: none; }
+
+  /* Sections */
+  .section-title { font-size: 24px !important; }
+  .section-title br { display: none; }
+  .about-features-grid { grid-template-columns: 1fr !important; }
+  .about-footer-action { flex-direction: column; align-items: stretch; gap: 12px; }
+  .about-footer-action .btn { width: 100%; justify-content: center; }
+  .stat-badge-floating { position: static; margin-top: 12px; }
+  .secondary-img { display: none; }
+
+  .activities-grid { grid-template-columns: 1fr !important; }
+  .activity-filters { display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px; flex-wrap: nowrap; }
+  .filter-btn { white-space: nowrap; flex: 0 0 auto; }
+
+  .counters-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; }
+  .counter-value { font-size: 28px; }
+
+  .highlights-grid { grid-template-columns: 1fr !important; }
+  .amount-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .form-row { grid-template-columns: 1fr !important; flex-direction: column; gap: 0; }
+  .contact-info-card, .contact-form-card { padding: 20px; }
+
+  .faq-question { font-size: 15px; text-align: left; }
+
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-bottom-flex { flex-direction: column; text-align: center; gap: 8px; }
+  .footer-legal-links { justify-content: center; flex-wrap: wrap; }
+}
+
+/* Chhote phones */
+@media (max-width: 400px) {
+  .counters-grid { grid-template-columns: 1fr !important; }
+  .slide-title { font-size: 24px !important; }
+}
