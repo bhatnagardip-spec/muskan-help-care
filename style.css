@@ -2918,3 +2918,21 @@ img { max-width: 100%; height: auto; }
   .counters-grid { grid-template-columns: 1fr !important; }
   .slide-title { font-size: 24px !important; }
 }
+/* ===== Gallery ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(11, 34, 63, 0.12);
+}
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
